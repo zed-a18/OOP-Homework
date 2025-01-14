@@ -52,8 +52,8 @@ class Library:
         return f"Book: {self.book} is being borrowed by Member: {self.member}"
 
 
-book1 = Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", 1)
-book2 = Book("To Kill a Mockingbird", "Harper Lee", 1)
+book1 = Book("Lord of the Rings", "J. R. R. Tolkien", 1)
+book2 = Book("A Game of Thrones", "George R. R. Martin", 1)
 
 member1 = Member("Alice", 101, 0)
 member2 = Member("Bruce", 102, 0)
