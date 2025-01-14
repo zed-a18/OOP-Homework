@@ -8,7 +8,7 @@ class Book:
         self.available = available
 
     def __str__(self):
-        return f"{self.title} by {self.author} is currently {self.availability_status}"
+        return f"{self.title} by {self.author} is currently {self.available}"
 
 
 class Member:
