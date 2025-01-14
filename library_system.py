@@ -57,6 +57,7 @@ book2 = Book("A Game of Thrones", "George R. R. Martin", 1)
 
 member1 = Member("Alice", 101, 0)
 member2 = Member("Bruce", 102, 0)
+member3 = Member("Charlie", 103, 0)
 
 library = Library(Book, Member)
 
@@ -65,9 +66,14 @@ library.add_book(book2)
 
 library.register_member(member1)
 library.register_member(member2)
+library.register_member(member3)
 
 library.lend_book(book1, member1)
 library.lend_book(book2, member2)
+print("\n")
 
 library.return_book(book1, member1)
 library.return_book(book2, member1)
+print("\n")
+
+library.lend_book(book1, member3)
