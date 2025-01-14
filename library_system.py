@@ -55,8 +55,8 @@ class Library:
 book1 = Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", 1)
 book2 = Book("To Kill a Mockingbird", "Harper Lee", 1)
 
-member1 = Member("John", 101, 0)
-member2 = Member("Alice", 102, 0)
+member1 = Member("Alice", 101, 0)
+member2 = Member("Bruce", 102, 0)
 
 library = Library(Book, Member)
 
@@ -68,5 +68,6 @@ library.register_member(member2)
 
 library.lend_book(book1, member1)
 library.lend_book(book2, member2)
+
 library.return_book(book1, member1)
 library.return_book(book2, member1)
