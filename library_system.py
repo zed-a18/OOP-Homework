@@ -8,11 +8,11 @@ class Book:
         self.available = available
 
     def __str__(self):
-        return f"{self.title} by {self.author} is currently {self.available}"
+        return f"{self.title} by {self.author}. Available: {self.available}"
 
 
 class Member:
-    def __init__(self, name, member_id, borrowed_book):
+    def __init__(self, name, member_id):
         self.name = name
         self.member_id = member_id
         self.borrowed_book = []
@@ -55,9 +55,9 @@ class Library:
 book1 = Book("Lord of the Rings", "J. R. R. Tolkien", 1)
 book2 = Book("A Game of Thrones", "George R. R. Martin", 1)
 
-member1 = Member("Alice", 101, 0)
-member2 = Member("Bruce", 102, 0)
-member3 = Member("Charlie", 103, 0)
+member1 = Member("Alice", 101)
+member2 = Member("Bruce", 102)
+member3 = Member("Charlie", 103)
 
 library = Library(Book, Member)
 
@@ -68,6 +68,9 @@ library.register_member(member1)
 library.register_member(member2)
 library.register_member(member3)
 
+print(book1)
+print(book2)
+
 library.lend_book(book1, member1)
 library.lend_book(book2, member2)
 print("\n")
@@ -77,3 +80,4 @@ library.return_book(book2, member1)
 print("\n")
 
 library.lend_book(book1, member3)
+library.lend_book(book1, member1)
